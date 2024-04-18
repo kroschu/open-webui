@@ -21,8 +21,7 @@ get_gpu_driver() {
     if lspci | grep -i amd >/dev/null; then
         # List of known GCN and later architecture cards
         # This is a simplified list, and in a real-world scenario, you'd want a more comprehensive one
-        local gcn_and_later=("Radeon HD 7000" "Radeon HD 8000" "Radeon R5" "Radeon R7" "Radeon R9" "Radeon RX"
-
+        local gcn_and_later=("Radeon HD 7000" "Radeon HD 8000" "Radeon R5" "Radeon R7" "Radeon R9" "Radeon RX")
         # Get GPU information
         local gpu_info=$(lspci | grep -i 'vga.*amd')
 
